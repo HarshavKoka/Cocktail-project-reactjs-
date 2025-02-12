@@ -1,9 +1,13 @@
-import React from 'react'
+import React from "react";
+import { Outlet } from "react-router";
 
 const Landing = () => {
     return (
-        <div><h1>Landing</h1></div>
-    )
-}
+        <div>
+            <h1>landing</h1>
+            <Outlet />
+        </div>
+    );
+};
 
-export default Landing
+export default Landing;
