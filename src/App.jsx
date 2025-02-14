@@ -8,20 +8,27 @@ import {
   Cocktail,
   Error,
   NewsLetter,
+  SinglePageError,
 } from "./pages/index";
+
+import { loader as landingLoader } from "./pages/Landing";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <HomeLayout />,
+    errorElement: <Error />,
     children: [
       {
         index: true,
         element: <Landing />,
+        errorElement: <SinglePageError />,
+        loader: landingLoader,
       },
       {
-        path: "cocktail",
+        path: "cocktail/:id",
         element: <Cocktail />,
+        errorElement: <SinglePageError />,
       },
       {
         path: "newsletter",
@@ -31,10 +38,6 @@ const router = createBrowserRouter([
         path: "about",
         element: <About />,
       },
-      {
-        path: "cocktail/:id",
-        element: <Cocktail />,
-      },
     ],
   },
 ]);
@@ -43,4 +46,4 @@ const App = () => {
   return <RouterProvider router={router} />;
 };
 
-export default App
+export default App;
