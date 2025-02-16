@@ -1,8 +1,10 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
+import Wrapper from "../assets/wrappers/CocktailPage";
 
 const Cocktail = () => {
-    return <div>Cocktail</div>;
+    useLoaderData();
+    return <Wrapper>Cocktail</Wrapper>;
 };
 
 export default Cocktail;
