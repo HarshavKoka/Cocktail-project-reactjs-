@@ -13,24 +13,22 @@ const Wrapper = styled.div`
   }
   .drink-info {
     padding-top: 2rem;
+    color: white !important; /* ✅ Force text color to white */
   }
   .drink p {
     font-weight: 700;
     text-transform: capitalize;
     line-height: 2;
     margin-bottom: 1rem;
+    color: white !important; /* ✅ Ensure paragraphs are white */
   }
   .drink-data {
     margin-right: 0.5rem;
     background: var(--primary-300);
     padding: 0.25rem 0.5rem;
     border-radius: var(--borderRadius);
-    color: var(--primary-700);
+    color: black; /* Text inside the green labels */
     letter-spacing: var(--letterSpacing);
-  }
-  .ing {
-    display: inline-block;
-    margin-right: 0.5rem;
   }
   @media (min-width: 992px) {
     .drink {
